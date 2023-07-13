@@ -10,7 +10,7 @@ df = pd.DataFrame({"Region":['North','West','East','South','North','West','East'
 df['Profit'] = df.apply(lambda x: 'Profit' if x['Revenue']>x['Cost'] else 'Loss', axis=1)
 print(df)
 
-#create new column using map
+#create new column using map, map works for series only
 team_map = {'One':'Red', 'Two':'Blue'}
 df['team color'] = df['Team'].map(team_map)
 print(df)
